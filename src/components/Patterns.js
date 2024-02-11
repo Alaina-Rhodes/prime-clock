@@ -1,4 +1,5 @@
-import primes from './primes'
+import primes from '../primes';
+import '../styles/Patterns.css';
 
 export default function Patterns({time}) {
     // For hours, minutes, total minutes, seconds, total seconds, and time as an integer, display if those numbers are prime

@@ -1,4 +1,4 @@
-import primes from './primes'
+import primes from '../primes'
 
 export default function Clock({time}) {
     // For hours, minutes, total minutes, seconds, total seconds, and time as an integer, display if those numbers are prime
@@ -21,7 +21,7 @@ export default function Clock({time}) {
     let secondHeight = 60;
     return (
         <div className={`clock`}>
-            <svg width={clockSize} height={clockSize}>
+            <svg className ='clock-svg' width={clockSize} height={clockSize}>
                 <circle stroke='black' strokeWidth={centerPoint - clockRadius} cx={centerPoint} cy={centerPoint} r={clockRadius} fill='#eee' ></circle>
                 <rect width={smallArmWidth} height={secondHeight} fill='red' x={centerPoint - smallArmWidth / 2} y={centerPoint - secondHeight} transform={`rotate(${time ? time.seconds * 6 : '0'} ${centerPoint + ' ' + centerPoint})`}></rect>
                 <rect width={bigArmWidth} height={minuteHeight} fill='black' x={centerPoint - bigArmWidth / 2} y={centerPoint - minuteHeight} transform={`rotate(${time ? time.minutes * 6 : '0'} ${centerPoint + ' ' + centerPoint})`}></rect>

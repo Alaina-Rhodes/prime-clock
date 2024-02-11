@@ -1,0 +1,69 @@
+.patterns {
+	display: grid;
+	grid-template-columns: 200px 400px;
+	grid-gap: 10px;
+	margin: auto;
+	border: 3px solid #aaa;
+	padding: 20px;
+}
+
+.pattern {
+	width: 100%;
+	max-width: 320px;
+	height: 100%;
+	font-size: 16px;
+}
+
+.prime-time {
+	text-align: center;
+	font-size: 40px;
+	line-height: 173px;
+	height: 167px;
+	padding: 20px;
+	background-color: #4c4;
+	width: 40vw;
+    margin: auto;
+    width: 500px;
+    border: 3px solid #2a2;
+	
+}
+
+.true:before {
+	content: 'Prime';
+}
+
+.true {
+    background-color: #4c4;
+}
+
+.false:before {
+   content: 'Not Prime';
+}
+
+.false {
+   background-color: #f55;
+}
+
+.pattern-name {
+   display: inline-block;
+}
+
+.true, .false {
+   display: inline-block;
+   text-align: center;
+}
+
+@media (min-width: 540px) {
+	.patterns {
+		width: 500px;
+    }
+
+    .true, .false {
+		width: 101px;
+		padding: 7px;
+	}
+
+	.pattern-name {
+		margin-left: 5px;
+	}
+}
